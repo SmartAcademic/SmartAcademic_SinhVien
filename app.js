@@ -22,11 +22,11 @@ app.get('/', (req, res) =>{
 });
 
 app.get('/home', (req, res) =>{
-    return res.render('Home');
+    return res.render('Menu');
 });
 
 app.post('/home', (req, res) => {
-    return res.render('Home');
+    return res.render('Menu');
 });
 
 app.listen(7000, () =>{
