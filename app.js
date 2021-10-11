@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-app.use(express.json({ extended : true}));
+app.use(express.json({ extended: true }));
 // Static Files
 app.use(express.static('public'));
 app.use('/css', express.static(__dirname + 'public/css'));
@@ -17,18 +17,25 @@ app.set('view engine', 'ejs');
 app.set('views', './views');;
 
 
-app.get('/', (req, res) =>{
+app.get('/', (req, res) => {
     return res.render('Login');
 });
 
-app.get('/home', (req, res) =>{
+app.get('/home', (req, res) => {
     return res.render('Menu');
 });
 
 app.post('/home', (req, res) => {
     return res.render('Menu');
 });
+app.get('/dev', (req, res) => {
+    return res.render('Home');
+});
+app.post('/dev', (req, res) => {
+    return res.render('Home');
+});
 
-app.listen(7000, () =>{
+
+app.listen(7000, () => {
     console.log("Server is running on port 7000!");
 });
