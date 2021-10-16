@@ -34,6 +34,18 @@ app.get('/dev', (req, res) => {
 app.post('/dev', (req, res) => {
     return res.render('Home');
 });
+app.get('/kqht', (req, res) => {
+    return res.render('KQHT');
+});
+app.post('/kqht', (req, res) => {
+    return res.render('KQHT');
+});
+app.get('/lichtd', (req, res) => {
+    return res.render('LichTD');
+});
+app.post('/lichtd', (req, res) => {
+    return res.render('LichTD');
+});
 
 
 app.listen(7000, () => {
