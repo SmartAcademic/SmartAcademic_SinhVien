@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 
+
+const dkhpRouter = require('./routers/dkhp');
+
 app.use(express.json({ extended : true}));
 // Static Files
 app.use(express.static('public'));
@@ -27,6 +30,30 @@ app.get('/home', (req, res) =>{
 
 app.post('/home', (req, res) => {
     return res.render('Menu');
+});
+
+app.get('/dkhp', (req, res) =>{
+    return res.render('Dkhp');
+});
+app.get('/dangky', (req, res) =>{
+    return res.render('Header');
+});
+// app.use('/', dkhpRouter);
+
+app.get('/congno', (req, res) =>{
+    return res.render('CongNo');
+});
+app.get('/thongtin', (req, res) =>{
+    return res.render('Profile');
+});
+
+app.get('/ghichu', (req, res) =>{
+    return res.render('GhiChu');
+});
+
+
+app.get('/foot', (req, res) =>{
+    return res.render('Footer');
 });
 
 app.listen(7000, () =>{

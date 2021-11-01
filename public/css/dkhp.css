@@ -1,8 +1,5 @@
 /* Google Font Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-body{
-    font-family:  'Source Sans Pro', sans-serif;
-}
 *{
   margin: 0;
   padding: 0;
@@ -254,94 +251,35 @@ body{
 }
 
 .row {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
-
 .mt-radio-inline {
-    margin-top: 20px;
-    margin-bottom: 10px;
+  padding: 1px;
+  margin-left: 550px;
 }
 .mt-radio-inline .mt-radio {
   
-    margin-left: 15px;
-  }
-  .mt-checkbox, .mt-radio {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .mt-checkbox>input, .mt-radio>input {
-    border: 1px solid transparent;
-    position: absolute;
-    top: 1px;
-    left: 0;
-    height: 18px;
-    width: 18px;
-    background: #E6E6E6;
-  }
-
-  .row1 {
-      margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-  
-  }
-  .textt {
-      margin-top: 500px;
-    font-size: 20px;
-    color: #0c6fbe;
-  }
-
-table.table-bordered{
-    border:1px solid #ddd;
-    margin-top:20px;
-    width: 100%;
-    /* color: #1da1f2; */
-    background: #f3f7f9;
-    font-size: 14px;
-    text-align: center;
-  }
-table.table-bordered > thead > tr > th{
-    border:1px solid #ddd;
-}
-table.table-bordered > tbody > tr > td{
-    border:1px solid #ddd;
+  margin-left: 15px;
 }
 
-.mt-radio>span{
-    border-radius: 50% !important;
+.mt-checkbox, .mt-radio {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-table.table-bordered .check {
-    background-image: url(../img/ico-select-min.png);
-    background-repeat: no-repeat;
-    width: 16px;
-    height: 16px;
-    background-size: cover;
-    display: inline-block;
+.mt-checkbox>input, .mt-radio>input {
+  border: 1px solid transparent;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background: #E6E6E6;
 }
-
-/* table.table-borderedd > thead {
-    white-space: nowrap;
-    background: #f3f7f9;
-    border-bottom: 2px solid #cad6d8;
-    color: #1da1f2;
-} */
-
-.row2 {
-  
-    margin-top: 30px;
-    margin-left: 100px;
-    margin-right: 300px;
-}
-.col-sm-5 {
-    background-color: white; 
-    border: 1px solid gray; 
-    min-height: 200px; 
-    border-radius: 10px;
-    margin-right: 400px;
+.mt-radio>input{
+  border-radius: 50% !important;
 }
