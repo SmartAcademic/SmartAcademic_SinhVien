@@ -1,7 +1,5 @@
-/* 
+/* Google Font Link */
 
-<<<<<<< HEAD
-=======
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 * {
     margin: 0;
@@ -11,8 +9,6 @@
 }
 
 .sidebar {
-
-  margin-top: 50px;
     position: fixed;
     left: 0;
     top: 0;
@@ -268,88 +264,6 @@
     }
 }
 
-.home-section{
-  position: relative;
-  background: #1e44ad;
-  min-height: 100vh;
-  width: calc(100% - 78px);
-  transition: all 0.5s ease;
-  z-index: 100;
-box-sizing: border-box;
-  left: 78px;
-}
-article{
-  float: left;
-  width: 90%;
-}
-nav{
-  float: left;
-  width: 10%;
-}
-
-.sidebar.open ~ .home-section{
-  left: 250px;
-  width: calc(100% - 250px);
-}
-.home-section .text{
-  display: inline-block;
-  color: #11101d;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-
-}
-
-
-
-header {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 1000px;
-  background: rgb(158, 30, 30);
-  color: #1f7e8b;
-  border-bottom: 1px solid blue;
-  position: fixed;
-  top:0;
-  left: 0;
-  width: 100%;
- 
-}
-
-.user-info a{
-  padding: 10px ;
-}
-.content {
-  background: #E4E9F7;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.sticky + .content {
-  padding-top: 102px;
-}
-
-.home {
-  background: #E4E9F7;
-
-  padding-left: 78px;
-  width: calc(100% - 78px);
-  transition: all 0.5s ease;
-  z-index: 2;
-}
-
-.sidebar.open ~ .home{
-  
-  width: calc(100%);
-}
-
-
-
-
 .main {
     width: calc(100% - 87px);
     height: 100%;
@@ -368,7 +282,6 @@ header {
     box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
 }
 
->>>>>>> 69bb8517db22d29875c5d1467a0cccbebe601146
 .header .header-content .title {
     float: left;
     padding-top: 8px;
@@ -392,6 +305,15 @@ header {
     float: left;
     padding-top: 12px;
     padding-right: 18px;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    margin-top: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .box-info {
@@ -523,4 +445,3 @@ th {
     height: 25px;
     border: solid 1px rgba(141, 159, 189, 0.34);
 }
- */
