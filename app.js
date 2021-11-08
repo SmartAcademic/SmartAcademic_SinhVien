@@ -36,7 +36,9 @@ app.get('/kqht', (req, res) => {
 app.get('/lichtd', (req, res) => {
     return res.render('LichTD');
 });
-
+app.get('/lichhoc', (req, res) => {
+    return res.render('LichHoc');
+});
 
 
 app.listen(7000, () => {

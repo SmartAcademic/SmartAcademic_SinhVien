@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="css/general.css">
+    <!-- <link rel="stylesheet" href="css/menu.css"> -->
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-gitlab'></i>
+            <div class="logo_name">SAS Academic</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="/home">
+                    <i class='bx bx-grid-alt bx-tada-hover'></i>
+                    <span class="links_name">Tổng quan</span>
+                </a>
+                <span class="tooltip">Tổng quan</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-id-card bx-tada-hover'></i>
+                    <span class="links_name">Thông tin sinh viên</span>
+                </a>
+                <span class="tooltip">Thông tin sinh viên</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-bell bx-tada-hover'></i>
+                    <span class="links_name">Ghi chú nhắc nhở</span>
+                </a>
+                <span class="tooltip">Ghi chú nhắc nhở</span>
+            </li>
+            <li>
+                <a href="/kqht">
+                    <i class='bx bxs-graduation  bx-tada-hover'></i>
+                    <span class="links_name">Kết quả học tập</span>
+                </a>
+                <span class="tooltip">Kết quả học tập</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-list-check bx-tada-hover'></i>
+                    <span class="links_name">Đăng ký học phần</span>
+                </a>
+                <span class="tooltip">Đăng ký học phần</span>
+            </li>
+            <li>
+                <a href="/lichhoc">
+                    <i class='bx bxs-calendar bx-tada-hover'></i>
+                    <span class="links_name">Xem lịch theo tuần</span>
+                </a>
+                <span class="tooltip">Xem lịch theo tuần</span>
+            </li>
+            <li>
+                <a href="/lichtd">
+                    <i class='bx bx-calendar-week bx-tada-hover'></i>
+                    <span class="links_name">Xem lịch theo tiến độ</span>
+                </a>
+                <span class="tooltip">Xem lịch theo tiến độ</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-dollar-circle  bx-tada-hover'></i>
+                    <span class="links_name">Tra cứu công nợ</span>
+                </a>
+                <span class="tooltip">Tra cứu công nợ</span>
+            </li>
+            <li>
+
+                <!-- <li>
+                <a href="#">
+                  <i class='bx bx-cog bx-tada-hover' ></i>
+                  <span class="links_name">Cài đặt giao điện</span>
+                </a>
+                <span class="tooltip">Cài đặt giao điện</span>
+              </li> -->
+
+
+            </li>
+            <li class="profile">
+                <!-- <div class="profile-details">
+                   <img src="img/logo.png" alt="profileImg">
+                 </div> -->
+                <i class='bx bx-log-out' id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+
+
+        <div class="header">
+            <div class="col-md-12 col-xs-12">
+                <div class="header-content">
+                    <div class="title">
+
+                        <p>Lịch học, lịch thi theo tuần</p>
+
+                    </div>
+                    <div class="user-info">
+                        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAbVJREFUSEvlloExBEEQRd9FQAaIABEgAkSACBABGSACREAGiAARIAJkoJ6aoW3tzuyeuzpVukopbrZfd0//vzdiRjGaEZc+4HlgGVhPRT4Dj8DDb4ougReBI2C3A2ABx8DlOAV0gbeAc8Bua3EN7AFvtYPx8zaw0KtwyI5M7o/hJDxzACyk/zn21d+ATXqfOn1PY87AZl6ncQFspg/OUjG9+M2OTbSTntwOXZaS2a3LZywB3n01ItgOXtMTjrdrqZpJndLT0K4jWLncDOw2F5G7vguyK3YdwUpD+Rh99B0TD372T4C9U7U7aEnS+byUY416JUnJXIfAaXU1vw9oHnNAb0k171IpaAr+1hD6uJFGcjJ0KZvgOG6NQy2XIk6p95i7tldgdiNlIrzNFGKng/eiTTYayW1wI5NaQNOrmy8QF0zj8dlqlPTqcu1XMryEF0a2WsEuZ/F9XTMK7dCRepdrqQhheQJ2aUTX82+XcqMEr4GrIwsH7DQXV4VPEuxUhKvnHJ2dTxIsrDd80uAS3Hf1lyFNA9wG9ztZXsTPa5gWOMJVxQ/otMHm12Ra/X6aHRel+P/AH1WqWx/59LQVAAAAAElFTkSuQmCC"
+                            /></a>
+                        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAXpJREFUSEvtluExBEEQhd9FQAhCIAJkIANE4ETgZEAEiIAMkAEZuAyIwNV3Na3a1M5sz9ae9ePm3+7O9NfvdffUzjTRmk3E1Rb8Z86XrN6VdCfpZKRMPiRdS7q3eCXwi6TDkaA+zIGkN16UwN9u97ukp4FJ4NyFO4vqRRTMPiy6lPTZkMCRpEdJwG01gzmIRedmVU8CqLrq2BMG30rad/VGMcp/miQLjjpUopb1JWmeGpXnMNg25gq6rM+tpTfOkkPWM81gsiUwTbaT1Hjr88QeklLriTCYcbKm8rZiJXAbNQIzo5TDW5uXIgzua96u5vHW5uer4FIn+iDHkswNb31u7UbBBMf6vcCIVRWjwMagZDW1o6atK1xjEvDXpgctB8DD4BL01yXQIPv/g2u1psZWZzq85o6ZYvG4bm94GfnnomtPM1upM40WgdpR7m0umnXSETDZPmfg1zQBNtN95QaG0vVPwBjgPmDxe0Tx4OC1g1vwRmztCjqZ1SvUJ2sf7qrHuwAAAABJRU5ErkJggg=="
+                            /></a>
+                        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAYtJREFUSEvtlu0xBEEQhp+LgBCIABEgAyLgIkAEiAARIAIyQARHBIRABupVPWp2bnZmeu7Hlir9c7e7n/7a7p0xkcwm4tILXgeOLOh74NObQA9Y0AWwYbAPYMcL94AFPAGOI2hIVPA74KY1gFbwHvAACF4SlfwQeK6VvgWsDG8jR2+W3as927YqbEU6c9MZ5dfAcqp+Sr6A04JDBXgNrJm++h6CWwqgBlbJds1qv6GEasmT6ctWNlkpgeNsL4GLWt/svfTOa1mXwLGDTUCT2yL6zN5NcTTgEjiUWcOk7D2i3mrYXgCV39XjAB41LkRStW3J+B/c0uu/V+p4Ta7SY1Unuz5zw5XuZi39x5b6RjoHdlTCoyV4Co4//tFoG4NIExgsoRQc79ozW/qNnKyajspVbteXwNo+7l+aBK/7Hbbe4MiUwKtkmrMdnMnccOmmendzLUgdGPX8V2r3uOaw+70XHN/oFFr840iVvWDZx3c6+PP8KPzY9IBlp2nVkpBoubinvxfc3dtgOBn4Gz7wWB9jGpQAAAAAAElFTkSuQmCC"
+                            /></a>
+                        <a id="name1" href="#">Nguyễn Tuấn Anh</a>
+                        <img src="img/avatar.png" style="width: 50px; height: 50px; ">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+
+            <div class="col-md-12 col-xs-12">
+                <div class="box-df">
+                    <div class="portlet">
+                        <div class="portlet-title">
+
+                            <div class="actions">
+                                <div class="mt-radio-inline" style="width: 300px;float: left;padding: 5px 0px 0px 0px;">
+                                    <label class="mt-radio" style="padding-left: 25px;margin-bottom: 0px;">
+                                            <input checked="checked" id="rdoLoaiLich" name="rdoLoaiLich" type="radio" value="0" /> <label lang="lichtheotuan-tatca">Tất cả</label>
+                                    <span></span>
+                                    </label>
+                                    <label class="mt-radio" style="padding-left: 25px;margin-bottom: 0px;">
+                                            <input id="rdoLoaiLich" name="rdoLoaiLich" type="radio" value="1" /> <label lang="lichtheotuan-lichhoc">Lịch học</label>
+                                    <span></span>
+                                    </label>
+                                    <label class="mt-radio" style="padding-left: 25px;margin-bottom: 0px;">
+                                            <input id="rdoLoaiLich" name="rdoLoaiLich" type="radio" value="2" /> <label lang="lichtheotuan-lichthi">Lịch thi</label>
+                                    <span></span>
+                                    </label>
+                                </div>
+                                <input id="dateNgayXemLich" style="text-align: center;" name="dateNgayXemLich" type="text" value="31/10/2021" />
+                                <script>
+                                    jQuery(function() {
+                                        jQuery("#dateNgayXemLich").kendoDatePicker({
+                                            "format": "dd/MM/yyyy",
+                                            "min": new Date(1900, 0, 1, 0, 0, 0, 0),
+                                            "max": new Date(2099, 11, 31, 0, 0, 0, 0)
+                                        });
+                                    });
+                                </script>
+                                <a href="javascript:;" class="btn btn-action" id="btn_HienTai" lang="lichtheotuan-hientaiButton">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i> Hiện tại
+                                </a>
+
+                                <a href="javascript:;" class="btn btn-action" id="btn_TroVe" lang="lichtheotuan-backButton">
+                                    <i class="fa fa-angle-left" aria-hidden="true"></i> Trở về
+                                </a>
+                                <a href="javascript:;" class="btn btn-action" id="btn_Tiep" lang="lichtheotuan-nextButton">Tiếp<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+                            </div>
+                        </div>
+                        <div class="table-wrapper">
+                            <div class="table-responsive">
+                                <table class="fl-table table table-bordered text-center no-footer dtr-inline" width="100%" role="grid">
+                                    <thead>
+                                        <tr role="row">
+                                            <th lang="lichtheotuan-cahoc">Tiết học</th>
+                                            <th><span lang="lichtheotuan-mon">Thứ 2</span><br>01/01/2021</th>
+                                            <th><span lang="lichtheotuan-tue">Thứ 3</span><br>01/01/2021</th>
+                                            <th><span lang="lichtheotuan-wed">Thứ 4</span><br>01/01/2021</th>
+                                            <th><span lang="lichtheotuan-thu">Thứ 5</span><br>01/01/2021</th>
+                                            <th><span lang="lichtheotuan-fri">Thứ 6</span><br>01/01/2021</th>
+                                            <th><span lang="lichtheotuan-sat">Thứ 7</span><br>01/01/2021</th>
+                                            <th><span lang="lichtheotuan-sun">Chủ nhật</span><br>01/01/2021</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>1</td>
+                                            <td rowspan="3">Môn A </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>2</td>
+
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>3</td>
+
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>4</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>5</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td rowspan="3">Môn A </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>6</td>
+                                            <td></td>
+                                            <td></td>
+
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>7</td>
+                                            <td></td>
+                                            <td></td>
+
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>9</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>10</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>11</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td rowspan="2">Môn A </td>
+
+                                            <td>Thi giữa kỳ</td>
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>12</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>13</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>14</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>14</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="colorSTLichThi" role="row">
+                                            <td>14</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange(); //calling the function(optional)
+        });
+
+
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
+            }
+        }
+    </script>
+</body>
+
+</html>
